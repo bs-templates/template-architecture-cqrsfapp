@@ -1,0 +1,48 @@
+﻿@page
+@model BAYSOFT.Presentations.WebAPP.Pages.Samples.CreateModel
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="row">
+    <div class="col-12">
+        <h4>Create new sample</h4>
+    </div>
+</div>
+
+<hr />
+
+<div class="row">
+    <div class="col-12">
+        <form method="post">
+            <div class="row">
+                <div class="col">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    
+                    <div class="form-group">
+                        <label asp-for="Input.Description"></label>
+                        <input class="form-control" asp-for="Input.Description">
+                        <span asp-validation-for="Input.Description" class="text-danger"></span>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <a class="btn btn-link" asp-page="./Index">Voltar</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="row">
+                                <div class="offset-md-8 col-md-4">
+                                    <button id="save-button" type="submit" class="btn btn-block btn-primary">Save</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
