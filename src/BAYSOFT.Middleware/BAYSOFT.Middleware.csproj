@@ -7,6 +7,8 @@
   <ItemGroup>
     <PackageReference Include="MediatR" Version="9.0.0" />
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Localization" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Localization.Routing" Version="2.2.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.0">
       <PrivateAssets>all</PrivateAssets>
@@ -14,12 +16,18 @@
     </PackageReference>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.0" />
-    <PackageReference Include="NetDevPack" Version="1.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Localization" Version="5.0.1" />
+    <PackageReference Include="ModelWrapper" Version="2.1.0" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\BAYSOFT.Core.Application\BAYSOFT.Core.Application.csproj" />
     <ProjectReference Include="..\BAYSOFT.Core.Domain.Entities\BAYSOFT.Core.Domain.Entities.csproj" />
+    <ProjectReference Include="..\BAYSOFT.Core.Domain.Services\BAYSOFT.Core.Domain.Services.csproj" />
+    <ProjectReference Include="..\BAYSOFT.Core.Domain.Validations\BAYSOFT.Core.Domain.Validations.csproj" />
     <ProjectReference Include="..\BAYSOFT.Core.Domain\BAYSOFT.Core.Domain.csproj" />
+    <ProjectReference Include="..\BAYSOFT.Infrastructures.Data\BAYSOFT.Infrastructures.Data.csproj" />
+    <ProjectReference Include="..\BAYSOFT.Infrastructures.Services\BAYSOFT.Infrastructures.Services.csproj" />
   </ItemGroup>
 
 </Project>

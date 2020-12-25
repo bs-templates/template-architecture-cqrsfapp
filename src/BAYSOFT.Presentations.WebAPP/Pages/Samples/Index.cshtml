@@ -29,10 +29,10 @@
                 @foreach (var sample in Model.Samples)
                 {
                     <tr>
-                        <td>@sample.SampleID</td>
+                        <td>@sample.Id</td>
                         <td>@sample.Description</td>
-                        <td><a asp-page="./Edit" asp-route-id="@sample.SampleID" title="Editar" class="text-primary"><i class="far fa-edit"></i></a></td>
-                        <td><a asp-page="./Delete" asp-route-id="@sample.SampleID" title="Excluir" class="text-danger"><i class="far fa-trash-alt"></i></a></td>
+                        <td><a asp-page="./Edit" asp-route-id="@sample.Id" title="Editar" class="text-primary"><i class="far fa-edit"></i></a></td>
+                        <td><a asp-page="./Delete" asp-route-id="@sample.Id" title="Excluir" class="text-danger"><i class="far fa-trash-alt"></i></a></td>
                     </tr>
                 }
             </tbody>

@@ -22,7 +22,7 @@ namespace BAYSOFT.Presentations.WebAPP.Pages.Samples
         {
             var query = new GetSampleByIDQuery();
 
-            query.Project(x => x.SampleID = id);
+            query.Project(x => x.Id = id);
 
             var response = await Mediator.Send(query, cancellationToken);
 
@@ -38,7 +38,7 @@ namespace BAYSOFT.Presentations.WebAPP.Pages.Samples
 
             var command = new DeleteSampleCommand();
 
-            command.Project(x => x.SampleID = Input.SampleID);
+            command.Project(x => x.Id = Input.Id);
 
             var response = await Mediator.Send(command);
 
@@ -54,7 +54,7 @@ namespace BAYSOFT.Presentations.WebAPP.Pages.Samples
         public class SampleModel
         {
             [Required]
-            public int SampleID { get; set; }
+            public int Id { get; set; }
             [Display(Name = "Description")]
             public string Description { get; set; }
             public SampleModel()
@@ -63,7 +63,7 @@ namespace BAYSOFT.Presentations.WebAPP.Pages.Samples
             }
             public SampleModel(Sample sample)
             {
-                SampleID = sample.SampleID;
+                Id = sample.Id;
                 Description = sample.Description;
             }
         }

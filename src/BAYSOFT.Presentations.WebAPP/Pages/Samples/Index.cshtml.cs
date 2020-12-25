@@ -25,7 +25,7 @@ namespace BAYSOFT.Presentations.WebAPP.Pages.Samples
 
         public class SampleModel
         {
-            public int SampleID { get; set; }
+            public int Id { get; set; }
             public string Description { get; set; }
             public SampleModel()
             {
@@ -33,7 +33,7 @@ namespace BAYSOFT.Presentations.WebAPP.Pages.Samples
             }
             public SampleModel(Sample sample)
             {
-                SampleID = sample.SampleID;
+                Id = sample.Id;
                 Description = sample.Description;
             }
         }
