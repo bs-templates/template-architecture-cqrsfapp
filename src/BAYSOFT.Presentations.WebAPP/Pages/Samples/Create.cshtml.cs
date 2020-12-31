@@ -46,11 +46,18 @@ namespace BAYSOFT.Presentations.WebAPP.Pages.Samples
             catch(BusinessException bex)
             {
                 ModelState.AddModelError("", bex.Message);
-                if (bex.InnerExceptions != null && bex.InnerExceptions.Count > 0)
+                if (bex.EntityExceptions != null && bex.EntityExceptions.Count > 0)
                 {
-                    foreach(var innerException in bex.InnerExceptions)
+                    foreach(var entityException in bex.EntityExceptions)
                     {
-                        ModelState.AddModelError("", innerException.Message);
+                        ModelState.AddModelError(entityException.SourceProperty, entityException.Message);
+                    }
+                }
+                if (bex.DomainExceptions != null && bex.DomainExceptions.Count > 0)
+                {
+                    foreach (var domainException in bex.DomainExceptions)
+                    {
+                        ModelState.AddModelError("", domainException.Message);
                     }
                 }
                 return Page();
