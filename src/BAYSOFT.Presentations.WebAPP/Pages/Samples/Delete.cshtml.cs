@@ -1,6 +1,6 @@
 ﻿using BAYSOFT.Presentations.WebAPP.Abstractions.Pages;
 using BAYSOFT.Core.Application.Default.Samples.Commands.DeleteSample;
-using BAYSOFT.Core.Application.Default.Samples.Queries.GetSampleByID;
+using BAYSOFT.Core.Application.Default.Samples.Queries.GetSampleById;
 using BAYSOFT.Core.Domain.Entities.Default;
 using Microsoft.AspNetCore.Mvc;
 using ModelWrapper.Extensions.GetModel;
@@ -20,7 +20,7 @@ namespace BAYSOFT.Presentations.WebAPP.Pages.Samples
         }
         public async Task OnGetAsync(int id, CancellationToken cancellationToken = default(CancellationToken))
         {
-            var query = new GetSampleByIDQuery();
+            var query = new GetSampleByIdQuery();
 
             query.Project(x => x.Id = id);
 
